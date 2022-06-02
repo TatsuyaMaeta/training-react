@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+### プロパティとステート
+props：親コンポーネント→子コンポーネントを呼び出すときに使用するもの
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+親から子に渡されるものでread only
 
-## Available Scripts
+state：コンポーネントの状態を表す
+stateは状態を表すものなので変更が可能
 
-In the project directory, you can run:
 
-### `npm start`
+親コンポーネント内で定義した関数コンポーネント(今回でいうところのAPP.jsのaddLang)を処理を子コンポーネントに渡して
+子コンポーネントの引数で定義した引数
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Form.jsからaddLangを呼び出せるようにApp.jsにonAddLangをFormタグ内に記述する
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#5のフォームと親子間のデータのやり取り のでーたのやりとりについて
+<Form onAddLang={addLang} />について
+Formタグに紐づいているonAddLangはメソッドになっているがそのメソッドの定義はこコンポーネントにて実施している。
+子コンポーネントではinputの入力内容を引数に持って実行。
+それは何かというと親コンポーネントでの{addLang}に引数を持たせて実行している。その結果console.logが出力される
+### 親子間でのデータのやりとりは理解がすぐにはできないのでちゃんと考えよう！
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+子コンポーネントの関数で引数で渡す時に1つ以上入るなら、波括弧でちゃんと囲うこと！
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+次は#6から！
+https://youtu.be/SKrnW7PRBdk
