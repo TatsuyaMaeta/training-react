@@ -26,3 +26,10 @@ Formタグに紐づいているonAddLangはメソッドになっているがそ�
 
 次は#6から！
 https://youtu.be/SKrnW7PRBdk
+
+
+学んだJSの最新ES6?の記法
+- map関数
+    https://ja.reactjs.org/docs/lists-and-keys.html
+- スプレッド構文
+    https://qiita.com/akisx/items/682a4283c13fe336c547
